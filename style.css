@@ -1,0 +1,331 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F9F9;
+    color: #2D2D2D;
+    margin: 0;
+    text-align: center;
+}
+
+/* AJUSTE 1: El contenedor genérico */
+.container {
+    max-width: 900px; /* Reducimos un poco para mejor legibilidad */
+    margin: 0 auto; /* Lo centramos horizontalmente */
+    padding: 60px 20px; /* Le damos espaciado vertical */
+}
+
+/* AJUSTE 2: Los estilos de las secciones */
+/* Quitamos el padding de las clases individuales y se lo damos al .container */
+.welcome-section, .quote-section, .testimonials-section, .custom-cta-section, .trust-section, .faq-section {
+    padding: 0; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2D2D2D;
+}
+
+/* --- ESTILOS DEL ENCABEZADO Y NAVEGACIÓN --- */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #B76E79;
+    text-decoration: none;
+}
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+.main-nav a:hover {
+    color: #B76E79;
+}
+.main-nav a.active {
+    color: #B76E79;
+    border-bottom: 2px solid #B76E79;
+}
+
+/* --- ESTILOS DE LA PÁGINA DE SERVICIOS Y ENCABEZADOS DE PÁGINA --- */
+.page-header {
+    background-color: #FADADD;
+    padding: 50px 20px;
+    text-align: center;
+}
+.page-header h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+.page-header p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+}
+
+/* --- ESTILOS ADICIONALES PARA LAS TARJETAS DE SERVICIO --- */
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+.service-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.service-card-image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+.service-card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.service-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.service-card-content h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #B76E79;
+}
+.service-card-content .description {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+    flex-grow: 1;
+}
+.service-price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: auto;
+}
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2D2D2D;
+}
+.duration {
+    font-size: 14px;
+    color: #777;
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+.book-button-container {
+    padding: 20px;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+}
+.book-button {
+    display: block;
+    background-color: #B76E79;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.book-button:hover {
+    background-color: #a05a65;
+    transform: scale(1.03);
+}
+.popular-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2D2D2D;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 0 0 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.advice-cta-section {
+    margin: 80px 0 40px 0;
+    padding: 40px 25px;
+    background: linear-gradient(45deg, #FADADD, #fdeeee);
+    border-radius: 20px;
+    text-align: center;
+}
+.advice-cta-section h2 {
+    font-size: 30px;
+    color: #2D2D2D;
+    margin: 0 0 15px 0;
+}
+.advice-cta-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+.advice-cta-button {
+    background-color: #B76E79;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(183, 110, 121, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+.advice-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(183, 110, 121, 0.5);
+}
+
+/* --- ESTILOS DEL PIE DE PÁGINA --- */
+footer {
+    background-color: #2D2D2D;
+    color: #F9F9F9;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer-social {
+    margin-bottom: 20px;
+}
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.footer-social a:hover {
+    color: #B76E79;
+}
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+/* --- ESTILOS ADICIONALES PARA LA PÁGINA DE GALERÍA --- */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+/* --- ESTILOS ADICIONALES PARA LA PÁGINA DE CONTACTO --- */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #B76E79;
+    border-bottom: 2px solid #FADADD;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #2D2D2D;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.contact-info a:hover {
+    color: #B76E79;
+}
+
+.contact-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Hacemos que el grid sea de una sola columna en móviles */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
