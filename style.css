@@ -456,4 +456,31 @@ footer {
     display: block;
     text-align: right;
 }
+/* --- ESTILOS PARA SECCIÓN BIENVENIDA (2 COLUMNAS) --- */
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 50px; /* Espacio entre la imagen y el texto */
+    align-items: center;
+}
+
+.welcome-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+    text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+/* Hacemos que se apilen en una columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .welcome-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+    .welcome-text {
+        text-align: center; /* Centramos el texto de nuevo en móvil */
+    }
+}
 
