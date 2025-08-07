@@ -328,4 +328,38 @@ footer {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+}
+/* ========== ESTILOS WHATSAPP FLOTANTE OPTIMIZADO ========== */
+.whatsapp-flotante-optimizado {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.whatsapp-flotante-optimizado:hover {
+    transform: scale(1.1);
+}
+.whatsapp-flotante-optimizado img {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    height: 30px;
+}
+.whatsapp-flotante-optimizado span {
+    font-size: 1em;
+}
+
+/* Opcional: Ocultar el botón original si aún existe */
+.whatsapp-flotante {
+    display: none;
 }
