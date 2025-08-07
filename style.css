@@ -363,3 +363,68 @@ footer {
 .whatsapp-flotante {
     display: none;
 }
+/* ========== ESTILOS PARA MENÚ PEGAJOSO Y BOTÓN CTA ========== */
+/* Hacer que la navegación se quede fija en la parte superior */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo no sea transparente al hacer scroll */
+    z-index: 1000; /* Se asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+}
+
+/* Estilos para el nuevo botón de llamada a la acción */
+.hero-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-principal {
+    background-color: #E8A0BF; /* Un color rosa que combine con tu paleta */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: #D17C9B; /* Un tono más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto sutil de crecimiento */
+}
+/* ========== ESTILOS PARA LA SECCIÓN DE TESTIMONIOS ========== */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonio-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #E8A0BF; /* Acento de color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.testimonio-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonio-card cite {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    text-align: right;
+}
