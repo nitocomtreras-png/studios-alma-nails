@@ -252,36 +252,64 @@ footer {
     margin: 5px 0;
     font-size: 14px;
     color: #ccc;
-}
-/* --- ESTILOS ADICIONALES PARA LA PÁGINA DE GALERÍA --- */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    margin-top: 40px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    position: relative;
-    aspect-ratio: 1 / 1;
+/* --- SECCIÓN DE GARANTÍAS CON EFECTO PARALLAX --- */
+.trust-section {
+    /* La imagen de fondo */
+    background-image: url('https://images.pexels.com/photos/3997380/pexels-photo-3997380.jpeg');
+    
+    /* La magia del efecto Parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative; /* Necesario para el overlay oscuro */
 }
 
-.gallery-item img {
+/* Añadimos una capa semioscura para que el texto resalte */
+.trust-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay negro con 50% de opacidad */
+    z-index: 1;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+/* Hacemos que el contenido se ponga por encima del overlay */
+.trust-section .container {
+    position: relative;
+    z-index: 2;
 }
-/* --- ESTILOS ADICIONALES PARA LA PÁGINA DE CONTACTO --- */
+
+/* Cambiamos el color de los textos a blanco para que sean legibles */
+.trust-title,
+.trust-text {
+    color: #FFFFFF;
+}
+
+/* Hacemos el ícono un poco más brillante */
+.trust-icon {
+    font-size: 50px;
+    color: #FFFFFF; /* Cambiamos el color del ícono */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Le damos un brillo sutil */
+    margin-bottom: 15px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    /* --- ESTILOS ADICIONALES PARA LA PÁGINA DE CONTACTO --- */
 
 .contact-grid {
     display: grid;
@@ -428,3 +456,4 @@ footer {
     display: block;
     text-align: right;
 }
+
