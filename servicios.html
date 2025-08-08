@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Transforma tus uñas en Alma Nails. Descubre nuestros servicios de manicura, diseños únicos y productos de alta calidad. ¡Agenda tu cita y siéntete radiante!">
-   
+    
     <title>Nuestros Servicios - Alma Nails</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://wa.me" crossorigin>
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo"><img src="images/logo-alma-nails.jpeg" alt="Logo de Alma Nails Studio"></a>
-            <nav class="main-nav">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source srcset="images/logo-alma-nails.webp" type="image/webp">
+                    <img src="images/logo-alma-nails.jpeg" alt="Logo de Alma Nails Studio">
+                </picture>
+            </a>
+            <nav class="main-nav" aria-label="Navegación principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html" class="active">Servicios</a></li>
+                    <li><a href="servicios.html" class="active" aria-current="page">Servicios</a></li>
                     <li><a href="galeria.html">Galería</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
@@ -25,115 +32,73 @@
     </header>
 
     <main>
-        <div class="page-header">
-            <h1>Nuestros Servicios</h1>
+        <section class="page-header" aria-labelledby="page-title">
+            <h1 id="page-title">Nuestros Servicios</h1>
             <p>Cada tratamiento está diseñado para realzar tu belleza y ofrecerte un momento de bienestar. Utilizamos solo productos de la más alta calidad para resultados espectaculares y duraderos.</p>
-        </div>
+        </section>
 
-        <div class="container"><div class="service-cards-grid">
+        <div class="container">
+            <section aria-labelledby="services-title">
+                <h2 id="services-title" class="visually-hidden">Lista de Servicios</h2>
+                <ul class="service-cards-grid">
+                    <li>
+                        <article class="service-card">
+                            <picture>
+                                <source srcset="images/services/servicio-gel.webp" type="image/webp">
+                                <img src="images/services/servicio-gel.jpg" alt="Mano elegante con uñas de gel en tonos nude y azul" loading="lazy" decoding="async">
+                            </picture>
+                            <div class="service-card-content">
+                                <h3>Uñas de Gel</h3>
+                                <p class="description">Duraderas y brillantes, con colores intensos que no pierden su esplendor.</p>
+                                <div class="service-price-info">
+                                    <span class="price">A consultar</span>
+                                    <span class="duration" aria-label="Duración no especificada">🕒 --</span>
+                                </div>
+                            </div>
+                            <div class="book-button-container">
+                                <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Uñas%20de%20Gel" target="_blank" rel="noopener noreferrer" class="book-button" aria-label="Reservar servicio de Uñas de Gel">Reservar Servicio</a>
+                            </div>
+                        </article>
+                    </li>
+                    
+                    <li>
+                        <article class="service-card">
+                            <div class="service-card-image-container">
+                                <picture>
+                                    <source srcset="images/services/servicios-acrilicas.webp" type="image/webp">
+                                    <img src="images/services/servicios-acrilicas.jpg" alt="Uñas acrílicas nude con un diseño de pedrería brillante" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Uñas Acrílicas <span class="popular-badge" aria-label="Servicio más popular">⭐</span></h3>
+                                <p class="description">Largas, resistentes y perfectas para diseños personalizados y atrevidos.</p>
+                                <div class="service-price-info">
+                                    <span class="price">A consultar</span>
+                                    <span class="duration" aria-label="Duración no especificada">🕒 --</span>
+                                </div>
+                            </div>
+                            <div class="book-button-container">
+                                <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Uñas%20Acrílicas" target="_blank" rel="noopener noreferrer" class="book-button" aria-label="Reservar servicio de Uñas Acrílicas">Reservar Servicio</a>
+                            </div>
+                        </article>
+                    </li>
+                    
+                    </ul>
+            </section>
 
-    <div class="service-card">
-        <div class="service-card-image-container">
-            <img src="images/services/servicio-gel.jpg" alt="Mano elegante con uñas de gel en tonos nude y azul">
-        </div>
-        <div class="service-card-content">
-            <h3>Uñas de Gel</h3>
-            <p class="description">Duraderas y brillantes, con colores intensos que no pierden su esplendor.</p>
-            <div class="service-price-info">
-                <span class="price">A consultar</span>
-                <span class="duration">🕒 --</span>
-            </div>
-        </div>
-        <div class="book-button-container">
-            <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Uñas%20de%20Gel" target="_blank" class="book-button">Reservar Servicio</a>
-        </div>
-    </div>
-
-    <div class="service-card">
-        <div class="service-card-image-container">
-             <div class="popular-badge">⭐ Más Popular</div>
-            <img src="images/services/servicios- acrilicas.jpg" alt="Uñas acrílicas nude con un diseño de pedrería brillante">
-        </div>
-        <div class="service-card-content">
-            <h3>Uñas Acrílicas</h3>
-            <p class="description">Largas, resistentes y perfectas para diseños personalizados y atrevidos.</p>
-            <div class="service-price-info">
-                <span class="price">A consultar</span>
-                <span class="duration">🕒 --</span>
-            </div>
-        </div>
-        <div class="book-button-container">
-            <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Uñas%20Acrílicas" target="_blank" class="book-button">Reservar Servicio</a>
-        </div>
-    </div>
-
-    <div class="service-card">
-        <div class="service-card-image-container">
-            <img src="images/services/servicios-nailart.jpg" alt="Mujer con un diseño de nail art de puntos sobre base nude">
-        </div>
-        <div class="service-card-content">
-            <h3>Nail Art Personalizado</h3>
-            <p class="description">Desde diseños minimalistas hasta decoraciones complejas. Tu imaginación es el límite.</p>
-            <div class="service-price-info">
-                <span class="price">Extra</span>
-                <span class="duration">🕒 --</span>
-            </div>
-        </div>
-        <div class="book-button-container">
-            <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20consultar%20sobre%20Nail%20Art" target="_blank" class="book-button">Consultar Diseño</a>
-        </div>
-    </div>
-    
-    <div class="service-card">
-        <div class="service-card-image-container">
-            <img src="images/services/servicio-esculpidas.jpg" alt="Proceso de aplicación de esmalte sobre uñas esculpidas en un salón">
-        </div>
-        <div class="service-card-content">
-            <h3>Uñas Esculpidas</h3>
-            <p class="description">Modeladas directamente sobre la uña para un acabado natural y perfecto.</p>
-            <div class="service-price-info">
-                <span class="price">A consultar</span>
-                <span class="duration">🕒 --</span>
-            </div>
-        </div>
-        <div class="book-button-container">
-            <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Uñas%20Esculpidas" target="_blank" class="book-button">Reservar Servicio</a>
-        </div>
-    </div>
-
-    <div class="service-card">
-        <div class="service-card-image-container">
-            <img src="images/services/servicios-semipermanentes.jpg" alt="Mujer con uñas semipermanentes oscuras con diseño de leopardo">
-        </div>
-        <div class="service-card-content">
-            <h3>Esmaltado Semipermanente</h3>
-            <p class="description">Un color impecable que dura semanas sin perder un ápice de brillo.</p>
-            <div class="service-price-info">
-                <span class="price">A consultar</span>
-                <span class="duration">🕒 --</span>
-            </div>
-        </div>
-        <div class="book-button-container">
-            <a href="https://wa.me/524961240745?text=Hola%2C%20quisiera%20agendar%20para%20Esmaltado%20Semipermanente" target="_blank" class="book-button">Reservar Servicio</a>
-        </div>
-    </div>
-
-</div>
-       </div> 
-
-            <div class="advice-cta-section">
-                <h2>¿No sabes cuál elegir?</h2>
+            <section class="advice-cta-section" aria-labelledby="advice-title">
+                <h2 id="advice-title">¿No sabes cuál elegir?</h2>
                 <p>¡No te preocupes! Escríbenos y nuestro equipo de expertas te asesorará para encontrar el tratamiento perfecto para ti, sin compromiso.</p>
-                <a href="https://wa.me/524961240745?text=Hola%2C%20necesito%20asesoramiento%20sobre%20sus%20servicios." class="advice-cta-button" target="_blank">Pedir Asesoramiento</a>
-            </div>
+                <a href="https://wa.me/524961240745?text=Hola%2C%20necesito%20asesoramiento%20sobre%20sus%20servicios." class="advice-cta-button" target="_blank" rel="noopener noreferrer">Pedir Asesoramiento</a>
+            </section>
         </div>
     </main>
     
     <footer>
         <div class="footer-container">
             <div class="footer-social">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
+                <a href="https://facebook.com/tu-pagina" rel="noopener noreferrer" target="_blank">Facebook</a>
+                <a href="https://instagram.com/tu-perfil" rel="noopener noreferrer" target="_blank">Instagram</a>
             </div>
             <div class="footer-info">
                 <p>&copy; 2025 Alma Nails Studio. Todos los derechos reservados.</p>
