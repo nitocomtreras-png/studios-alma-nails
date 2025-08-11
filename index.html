@@ -1,144 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transforma tus uñas en Alma Nails. Descubre nuestros servicios de manicura, diseños únicos y productos de alta calidad. ¡Agenda tu cita y siéntete radiante!">
-    
-    <title>Alma Nails - Tu Espacio de Belleza</title>
-    
-    <link rel="preconnect" href="https://wa.me" crossorigin>
-    
+    <title>Alma Nails - Salón de Uñas Profesional</title>
+    <title>Studio Alma Nails | Salón de Uñas Profesional en Aguascalientes</title>
+    <meta name="description"
+        content="Descubre Studio Alma Nails en Aguascalientes, tu refugio para el arte en uñas. Especialistas en acrílico, gel y nail art personalizado. ¡Reserva tu experiencia!">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Studio Alma Nails",
+  "image": "https://www.tudominio.com/images/logo-alma-nails.webp", // <-- ¡IMPORTANTE! Reemplaza con tu URL completa cuando tengas dominio
+  "url": "https://www.tudominio.com/", // <-- ¡IMPORTANTE! Reemplaza con tu dominio
+  "telephone": "+524961240745",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Francisco de J Herrera, Vista Montaña",
+    "addressLocality": "Aguascalientes",
+    "addressRegion": "Ags",
+    "postalCode": "20126",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 21.9142,  // He buscado una coordenada aproximada, ajústala si es necesario
+    "longitude": -102.3168 // He buscado una coordenada aproximada, ajústala si es necesario
+  }
+}
+</script>
 </head>
+
 <body>
 
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <picture>
-                    <source srcset="images/logo-alma-nails.webp" type="image/webp">
-                    <img src="images/logo-alma-nails.jpeg" alt="Logo de Alma Nails Studio">
-                </picture>
-            </a>
-            <nav class="main-nav" aria-label="Navegación Principal">
-                <ul>
-                    <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- HEADER GLOBAL -->
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo-alma-nails.webp" alt="Logotipo de Alma Nails" class="logo-img">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <section class="banner-section" aria-labelledby="banner-title">
-            <div class="banner-content">
-                <h1 id="banner-title" class="banner-overlay-text">El Arte en Tus Manos</h1>
-                <a href="https://wa.me/524961240745?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Alma%20Nails." target="_blank" rel="noopener noreferrer" class="banner-cta-button">Reservar mi Cita Ahora</a>
-                <p class="banner-microcopy">¡Cupos limitados esta semana!</p>
+        <section class="hero-banner" role="img" aria-label="Mujer con manicura elegante con detalles dorados">
+            <div class="hero-content">
+                <h1>Tu Estilo Hecho Arte</h1>
+                <p>Más que una manicura, una experiencia de autoexpresión y bienestar.</p>
+                <a href="contacto.html" class="cta-button">Reserva Tu Experiencia</a>
             </div>
         </section>
 
-        <section class="welcome-section" aria-labelledby="welcome-title">
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h2>Un refugio creado para ti</h2>
+                <p>En Alma Nails, entendemos que tus manos cuentan tu historia. Por eso, hemos creado más que un salón:
+                    un refugio donde puedes desconectar y permitirnos transformar tus uñas en el reflejo de tu alma.
+                    Aquí, la técnica excepcional y los productos de la más alta calidad se fusionan con una conversación
+                    cercana y un café, convirtiendo tu manicura en un ritual que querrás repetir.</p>
+            </div>
+            <div class="welcome-image">
+                <img src="images/bienvenida-salon.webp"
+                    alt="Interior del salón de uñas Alma Nails, un espacio moderno y acogedor" loading="lazy">
+            </div>
+        </section>
+
+        <section class="services-overview">
             <div class="container">
-                <div class="welcome-grid">
-                    <div class="welcome-image">
-                        <picture>
-                            <source srcset="images/bienvenida-salon.webp" type="image/webp">
-                            <img src="images/bienvenida-salon.jpg" alt="Aplicación de esmalte con detalle profesional" loading="lazy" decoding="async">
-                        </picture>
-                    </div>
-                    <div class="welcome-text">
-                        <h2 id="welcome-title" class="welcome-heading">Bienvenid@ a <span class="welcome-accent">Alma Nails</span></h2>
-                        <p class="welcome-tagline"><span aria-hidden="true">💅</span> Tu espacio donde el arte y el cuidado de tus uñas se convierten en estilo.</p>
-                        <p>En Alma Nails, creemos que cada detalle cuenta. Por eso nos dedicamos a ofrecerte una experiencia de lujo con productos de la más alta calidad en un ambiente relajante y seguro. Permítenos consentirte.</p>
-                    </div>
+                <h2>Nuestros Servicios Destacados</h2>
+                <div class="services-container">
+                    <article class="service-card">
+                        <img src="images/services/servicios-acrilicas.webp"
+                            alt="Uñas acrílicas nude con un diseño de pedrería brillante." loading="lazy">
+                        <div class="service-card-content">
+                            <h3>Uñas Acrílicas</h3>
+                            <p>Máxima durabilidad y resistencia. La solución perfecta para alargar y esculpir tus uñas
+                                con un estilo audaz.</p>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="images/services/servicios-semipermanentes.webp"
+                            alt="Mujer con uñas semipermanentes oscuras con diseño de leopardo." loading="lazy">
+                        <div class="service-card-content">
+                            <h3>Esmaltado Semipermanente</h3>
+                            <p>Un acabado de espejo y color intacto por semanas. Olvídate de los retoques y disfruta de
+                                un brillo intenso.</p>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="images/services/servicios-nailart.webp"
+                            alt="Mujer con un diseño de nail art de puntos sobre base nude." loading="lazy">
+                        <div class="service-card-content">
+                            <h3>Nail Art Personalizado</h3>
+                            <p>Expresa tu creatividad sin límites. Desde diseños minimalistas y elegantes hasta
+                                creaciones complejas y únicas.</p>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </section>
-
-        <section class="quote-section" aria-label="Cita inspiracional">
-            <div class="container">
-                <blockquote class="quote-block">
-                    <h2 class="quote-heading">"Tus uñas hablan antes que tus palabras."</h2>
-                    <p class="quote-tagline">Cada diseño refleja tu esencia <span aria-hidden="true">💖</span></p>
-                </blockquote>
-            </div>
-        </section>
-        
-        <section class="testimonials-section" aria-labelledby="testimonials-title">
-            <div class="container">
-                <h2 id="testimonials-title" class="testimonials-title">Lo que nuestras clientas dicen...</h2>
-                <div class="testimonial-grid">
-                    <figure class="testimonial-card">
-                        <blockquote cite="#"> <p>"¡Increíble! Nunca había tenido unas uñas tan perfectas y duraderas. El trato es súper profesional y amable. ¡Volveré sin duda!"</p>
-                        </blockquote>
-                        <figcaption>— Sofía M.</figcaption>
-                    </figure>
-                    <figure class="testimonial-card">
-                        <blockquote cite="#">
-                            <p>"El mejor lugar para hacerse las uñas. La atención al detalle es impresionante y el ambiente es muy relajante. ¡100% recomendado!"</p>
-                        </blockquote>
-                        <figcaption>— Valeria G.</figcaption>
-                    </figure>
+                <div class="services-link-container" style="text-align: center; margin-top: 4rem;">
+                    <a href="servicios.html" class="cta-button secondary">Ver todos los servicios</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="custom-cta-section">
-            <div class="container">
-                <h2 class="cta-heading">Descubre Nuestros Servicios</h2>
-                <p class="cta-subheading">Desde manicuras clásicas hasta diseños artísticos únicos, tenemos algo para ti.</p>
-                <a href="servicios.html" class="custom-button">Explorar Servicios</a>
-            </div>
-        </section>
-
-        <section class="trust-section" aria-labelledby="trust-title">
-            <div class="container">
-                <h2 id="trust-title" class="trust-title">Nuestras Garantías</h2>
-                <ul class="trust-grid">
-                    <li class="trust-item">
-                        <span class="trust-icon" aria-hidden="true">💎</span>
-                        <span class="trust-text">Productos de Alta Calidad</span>
-                    </li>
-                    <li class="trust-item">
-                        <span class="trust-icon" aria-hidden="true">✨</span>
-                        <span class="trust-text">Higiene y Seguridad</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="faq-section" aria-labelledby="faq-title">
-            <div class="container">
-                <h2 id="faq-title" class="faq-title">Preguntas Frecuentes</h2>
-                <dl class="faq-list">
-                    <div class="faq-item">
-                        <dt class="faq-question">¿Necesito agendar una cita?</dt>
-                        <dd class="faq-answer">
-                            <p>Sí, para garantizarte el mejor servicio y atención personalizada, trabajamos únicamente con citas. Puedes <a href="https://wa.me/524961240745?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Alma%20Nails." target="_blank" rel="noopener noreferrer">reservar aquí</a>.</p>
-                        </dd>
-                    </div>
-                </dl>
             </div>
         </section>
     </main>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-social">
-                <a href="https://facebook.com/tu-pagina" rel="noopener noreferrer" target="_blank">Facebook</a>
-                <a href="https://instagram.com/tu-perfil" rel="noopener noreferrer" target="_blank">Instagram</a>
-            </div>
-            <div class="footer-info">
-                <p>&copy; 2025 Alma Nails Studio. Todos los derechos reservados.</p>
-                <p>Diseñado por Emmanuel Contreras</p>
-            </div>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Alma Nails. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-</body>
-</html>
+    <!-- SCRIPT PARA DESVANECER EL HEADER -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 
+</body>
+
+</html>
